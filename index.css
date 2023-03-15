@@ -1,0 +1,10 @@
+.form-control{
+border-radius: 8px;
+border-color: blue;    
+}
+.btn{
+background-color:green;
+color: #fff;
+text-transform: uppercase;
+border-radius: 16px;
+}

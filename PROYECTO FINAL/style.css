@@ -157,10 +157,12 @@ background-color:#2D3440;
 
 .nav-link{
     color: #c4c3ca;
+    
 }
 .nav-link:hover{
 color:#FFE352;
 background-color: #4b7bb2;
+box-shadow: 0 16px 32px 0 rgba(255,235,167,.32);
 }
 
 .navbar-toggler-icon {
@@ -186,6 +188,13 @@ background-color: #4b7bb2;
 
   }
 
+  #blob1{
+    width:100vw;
+    height:100%;  
+    }
+
+  
+
   @media only screen and (min-width: 320px) and (max-width: 576px) {
     .btn {
       width: 100%;
@@ -195,6 +204,11 @@ background-color: #4b7bb2;
         width: 100%;
         height:100%; 
     }
+    #blob1{
+    width:100%;
+    height:100%;  
+    }
+
   }
 
 
