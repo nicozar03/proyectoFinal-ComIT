@@ -159,9 +159,15 @@ background-color:#2D3440;
     color: #c4c3ca;
     
 }
+.nav-item{
+  border-radius: 32px;
+ 
+}
 .nav-link:hover{
 color:#FFE352;
 background-color: #4b7bb2;
+border-radius: 32px;
+text-align: center;
 box-shadow: 0 16px 32px 0 rgba(255,235,167,.32);
 }
 
