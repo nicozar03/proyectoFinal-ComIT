@@ -213,6 +213,40 @@ box-shadow: 0 16px 32px 0 rgba(255,235,167,.32);
     height:320px;
     margin-bottom: 8vh;
    }
+
+   .aboutme {
+    font-size: 24px;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
  
   .imgabilities{
    width:200px;
@@ -255,6 +289,7 @@ box-shadow: 0 16px 32px 0 rgba(255,235,167,.32);
 
     .hidden{
      opacity: 0;
+     width:100%;
      transition: all 3s ease;
      filter:blur(5px);
      transform:translateX(-100%)
@@ -270,6 +305,20 @@ box-shadow: 0 16px 32px 0 rgba(255,235,167,.32);
      transition:none; 
     }
    } 
+
+   .card{
+   background-color: #1f2029; 
+   color:#c4c3ca;
+   border-radius: 16px;
+   border-color: #FFE352;
+   }
+
+   .card-img-top{
+   object-fit: cover;
+   width: 100%;
+   height: 200px; 
+   border-radius: 16px;
+   }
 
 
   
