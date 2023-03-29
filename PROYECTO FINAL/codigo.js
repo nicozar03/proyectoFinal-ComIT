@@ -17,29 +17,36 @@ function Buscar(){
         }
 
         let table= document.getElementById("table");
-        let td1;
-        let td2;
-        let td3;
-        let td4;
-        let td5;
+        let tr;
+        let tdArr=[]
         response.data.Search.forEach(response=> {
-            
+            for(i=0; i<5; i++){
+                tdArr[i]=document.createElement("td");
+            }
             tr=document.createElement("tr");
-            td1=document.createElement("td");
-            td2=document.createElement("td");
-            td3=document.createElement("td");
-            td4=document.createElement("td");
-            td5=document.createElement("td");
-            td1.innerText=`${response.Title}`;
-            td2.innerText=`${response.Year}`;
-            td3.innerText=`${response.Type}`;
-            td4.innerHTML=`<img src="${response.Poster}" class="img" alt="">`;
-            td5.innerHTML=`<button type="button" class="btn-detalle" onclick="pelisDetalles('${response.imdbID}')"> Ver detalles</button>`;
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            tr.appendChild(td4);
-            tr.appendChild(td5);
+            
+            // tdArr[1]=document.createElement("td");
+            // tdArr[2]=document.createElement("td");
+            // tdArr[3] =document.createElement("td");
+            // tdArr[4]=document.createElement("td");
+            tdArr[0].innerText=`${response.Title}`;
+            tdArr[1].innerText=`${response.Year}`;
+            tdArr[2].innerText=`${response.Type}`;
+            tdArr[3].innerHTML=`<img src="${response.Poster}" class="img" alt="">`;
+            var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+            if (vw <= 500) {
+                $(tdArr[3].innerHTML=`${response.Title}`).show()
+            }
+            else{
+                $(tdArr[3].innerHTML=`<img src="${response.Poster}" class="img" alt="">`).show() 
+            }
+            tdArr[4].innerHTML=`<button type="button" class="btn-detalle" onclick="pelisDetalles('${response.imdbID}')"> Ver detalles</button>`;
+            tr.appendChild(tdArr[0]);
+            tr.appendChild(tdArr[1]);
+            tr.appendChild(tdArr[2]);
+            tr.appendChild(tdArr[3]);
+            tr.appendChild(tdArr[4]);
             table.appendChild(tr);
 
 
@@ -83,9 +90,3 @@ function pelisDetalles(id){
     `
 })
 }
-const tween = KUTE.fromTo(
-    '#blob1',
-    { path: '#blob1' },
-    { path: '#blob2' },
-    { repeat: 999, duration: 3000, yoyo: true }
-).start();

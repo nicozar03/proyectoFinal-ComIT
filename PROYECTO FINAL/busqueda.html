@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>BUSQUEDA</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>BUSQUEDA</title>
 </head>
+
 <body>
   <div class="container-fluid">
     <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logo.png" width="75" height="75" alt="">
-                  </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="busqueda.html" >BUSQUEDA</a>
-                      </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">CONTACTO</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="sobremi.html">SOBRE MÍ</a>
-                      </li>
-    
-                </div>
-              </nav>
-              </div>
-        </div>
+      <div class="col-1"></div>
+      <div class="col-10">
+        <nav class="navbar navbar-expand-md">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" width="75" height="75" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="busqueda.html">BUSQUEDA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">CONTACTO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobremi.html">SOBRE MÍ</a>
+              </li>
+
+          </div>
+        </nav>
+      </div>
     </div>
-<h3>Aquí podras buscar informacion sobre el contenido multimedia que quieras</h3>
-    <div class="container">
-      <div class="row">
-        <div class="col-2"></div>
+  </div>
+  <h3>Aquí podras buscar informacion sobre el contenido multimedia que quieras</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
       <div class="col-md-8 col-sm-10">
         <div class="form-group">
           <label for="exampleFormControlInput1">Nombre</label><br>
-          <input type="text" class="form-control" id="titulo" placeholder="Por favor ingrese el nombre de la película (requerido)" required><br>
+          <input type="text" class="form-control" id="titulo"
+            placeholder="Por favor ingrese el nombre de la película (requerido)" required><br>
           <label for="exampleFormControlInput2">Año</label><br>
-          <input type="number" class="form-control" id="anio" placeholder="Ingrese el año de la película (opcional)"><br>
+          <input type="number" class="form-control" id="anio"
+            placeholder="Ingrese el año de la película (opcional)"><br>
           <label for="exampleFormControlSelect1">Tipo</label><br>
           <select class="form-control" id="tipoBusqueda"><br>
             <option value="" disabled selected hidden>Ingrese el tipo de contenido de su busqueda (opcional)</option>
@@ -56,7 +62,7 @@
             <option value="episode">Episodio</option>
             <option value="game">Juego</option>
           </select>
-         
+
         </div>
       </div>
     </div>
@@ -67,13 +73,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2"></div>
-        <div class="col-md-8 col-sm-10">
-  <table class="table table-striped" id="table">
-        </div>
-     </div>
-  </div>
+      <div class="col-md-8 col-sm-10">
+        <table class="table" id="table">
+        </table>
 
-  </table>
+      </div>
+    </div>
+  </div>
 
   <div class="modal fade" id="InfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
@@ -84,11 +90,11 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div  id= "modalBody"class="modal-body">
+        <div id="modalBody" class="modal-body">
         </div>
         <div class="modal-footer" style="display: flex; justify-content: center; align-items: center;">
           <div class="button">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -97,19 +103,27 @@
 
   <footer style="margin-top: 5vh;">
     <div class="footer">
-    <a href="mailto:nicolaszarlenga0309@gmail.com"><ion-icon name="mail-outline" class="icon"></ion-icon></a>
-    <a href="tel:1139066517"><ion-icon name="call-outline" class="icon"></ion-icon></a>
-    <a href="https://www.linkedin.com/in/nicolas-zarlenga-71289b237/"><ion-icon name="logo-linkedin" class="icon"></ion-icon></a>
-    <a href="https://github.com/nicozar03"><ion-icon name="logo-github" class="icon"></ion-icon></a>
-  </div>
-  <p style="text-align: center; margin-top: 2vh;">© 2023 Todos los derechos reservados || Nicolás Zarlenga</p>
+      <a href="mailto:nicolaszarlenga0309@gmail.com"><ion-icon name="mail-outline" class="icon"></ion-icon></a>
+      <a href="tel:1139066517"><ion-icon name="call-outline" class="icon"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/nicolas-zarlenga-71289b237/"><ion-icon name="logo-linkedin"
+          class="icon"></ion-icon></a>
+      <a href="https://github.com/nicozar03"><ion-icon name="logo-github" class="icon"></ion-icon></a>
+    </div>
+    <p style="text-align: center; margin-top: 2vh;">© 2023 Todos los derechos reservados || Nicolás Zarlenga</p>
   </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="codigo.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="codigo.js"></script>
 </body>
+
 </html>
