@@ -20,45 +20,28 @@ function Buscar(){
         let tr;
         let tdArr=[]
         response.data.Search.forEach(response=> {
-            for(i=0; i<5; i++){
-                tdArr[i]=document.createElement("td");
-            }
             tr=document.createElement("tr");
-            
-            // tdArr[1]=document.createElement("td");
-            // tdArr[2]=document.createElement("td");
-            // tdArr[3] =document.createElement("td");
-            // tdArr[4]=document.createElement("td");
-            tdArr[0].innerText=`${response.Title}`;
-            tdArr[1].innerText=`${response.Year}`;
-            tdArr[2].innerText=`${response.Type}`;
-            tdArr[3].innerHTML=`<img src="${response.Poster}" class="img" alt="">`;
-            var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
-            if (vw <= 500) {
-                $(tdArr[3].innerHTML=`${response.Title}`).show()
+            for(i=0; i<5; i++){
+               
+                tdArr[i]=document.createElement("td");
+                switch(i){
+                case 0: tdArr[i].innerText = `${response.Title}`; break;
+                case 1: tdArr[i].innerText=`${response.Year}`; break;
+                case 2: tdArr[i].innerText=`${response.Type}`; break;
+                case 3: var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                if (vw <= 500) {
+                    $(tdArr[i].innerText=`Los poster pueden verse desde computadoras`).show()
+                }
+                else{
+                    $(tdArr[i].innerHTML=`<img src="${response.Poster}" class="img" alt="">`).show() 
+                };break;
+                case 4: tdArr[i].innerHTML=`<button type="button" class="btn-detalle" onclick="pelisDetalles('${response.imdbID}')"> Ver detalles</button>`
+                }
+                tr.appendChild(tdArr[i]);
             }
-            else{
-                $(tdArr[3].innerHTML=`<img src="${response.Poster}" class="img" alt="">`).show() 
-            }
-            tdArr[4].innerHTML=`<button type="button" class="btn-detalle" onclick="pelisDetalles('${response.imdbID}')"> Ver detalles</button>`;
-            tr.appendChild(tdArr[0]);
-            tr.appendChild(tdArr[1]);
-            tr.appendChild(tdArr[2]);
-            tr.appendChild(tdArr[3]);
-            tr.appendChild(tdArr[4]);
             table.appendChild(tr);
-
-
         })
-
-
-    
-
-
-          
           console.log(response)
-
       });
 
 } 
