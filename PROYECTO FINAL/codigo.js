@@ -9,7 +9,7 @@ function Buscar(){
 
     axios({
         method: 'get',
-        url:` http://www.omdbapi.com/?apikey=${apikey}&s=${titulo}&y=${anio}&type=${tipoBusqueda}`,
+        url:` https://www.omdbapi.com/?apikey=${apikey}&s=${titulo}&y=${anio}&type=${tipoBusqueda}`,
         
        }).then(response => {
         if(titulo===''){
@@ -30,7 +30,7 @@ function Buscar(){
                 case 2: tdArr[i].innerText=`${response.Type}`; break;
                 case 3: var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
                 if (vw <= 500) {
-                    $(tdArr[i].innerText=`Los poster pueden verse desde computadoras`).show()
+                    $(tdArr[i].innerText=`${response.imdbID}`).show()
                 }
                 else{
                     $(tdArr[i].innerHTML=`<img src="${response.Poster}" class="img" alt="">`).show() 
