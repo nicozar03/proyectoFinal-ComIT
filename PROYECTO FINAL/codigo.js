@@ -49,7 +49,7 @@ function Buscar(){
 function pelisDetalles(id){
     axios({
         method: "get",
-        url: "http://www.omdbapi.com/?apikey=5c54844d",
+        url: "https://www.omdbapi.com/?apikey=5c54844d",
         params:{
             i:`${id}`
         }
